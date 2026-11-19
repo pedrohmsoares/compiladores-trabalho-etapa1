@@ -1,0 +1,13 @@
+program exemplo2 begin
+    total = int;
+    media = float;
+    inicial = char;
+    {* comentario de varias linhas
+       usado neste teste *}
+    total = 42;
+    media = 8.75;
+    inicial = 'A';
+    if total >= 40 then
+        write("aprovado")
+    end
+end.

@@ -1,0 +1,3 @@
+program exemplo1 begin
+    write("Ola, compiladores!")
+end.

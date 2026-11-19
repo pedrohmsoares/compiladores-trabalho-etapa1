@@ -34,4 +34,38 @@ public class Tag {
             CHAR_CONST  = 280,
             LITERAL     = 281,
             EOF         = 282;
+
+    /* Devolve o nome de uma tag em texto, usado nas mensagens de erro do analisador sintático */
+    public static String nome(int tag) {
+        switch (tag) {
+            case PROGRAM:     return "'program'";
+            case BEGIN:       return "'begin'";
+            case END:         return "'end'";
+            case INT:         return "'int'";
+            case FLOAT:       return "'float'";
+            case CHAR:        return "'char'";
+            case IF:          return "'if'";
+            case THEN:        return "'then'";
+            case ELSE:        return "'else'";
+            case REPEAT:      return "'repeat'";
+            case UNTIL:       return "'until'";
+            case WHILE:       return "'while'";
+            case DO:          return "'do'";
+            case READ:        return "'read'";
+            case WRITE:       return "'write'";
+            case EQ:          return "'=='";
+            case NE:          return "'!='";
+            case GE:          return "'>='";
+            case LE:          return "'<='";
+            case AND:         return "'&&'";
+            case OR:          return "'||'";
+            case ID:          return "identificador";
+            case INT_CONST:   return "constante inteira";
+            case FLOAT_CONST: return "constante float";
+            case CHAR_CONST:  return "constante char";
+            case LITERAL:     return "literal";
+            case EOF:         return "fim de arquivo";
+            default:          return "'" + (char) tag + "'";
+        }
+    }
 }
